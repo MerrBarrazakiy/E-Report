@@ -59,10 +59,18 @@
     <!-- all report -->
         <section id="reports">
             <div class="container">
-                <div class="text-center">
-                    <h1 class="fw-bold text-primary-emphasis" data-aos="fade-up" data-aos-duration="1000">All Report</h1>
-                    <p class="lh-lg text-secondary" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Berikut adalah daftar laporan yang telah masuk ke sistem E-Report. Setiap laporan akan diproses secara profesional dan transparan oleh tim kami.</p>
+                <!-- judul -->
+                <div class="d-flex justify-content-center justify-content-md-between align-items-center mb-3 flex-wrap flex-md-row gap-3 mb-3">
+                    <div class="col-md-8 text-center text-md-start">
+                        <h1 class="fw-bold text-primary-emphasis" data-aos="fade-up" data-aos-duration="1000">All Report</h1>
+                        <p class="lh-lg text-secondary" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">Berikut adalah daftar laporan yang telah masuk ke sistem E-Report. Setiap laporan akan diproses secara profesional dan transparan oleh tim kami.</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary px-4 ms-auto shadow-sm" data-bs-toggle="modal" data-bs-target="#addModal"><i class="fa-solid fa-plus me-3"></i>Tambah Laporan</button>
+                    </div>
                 </div>
+
+                <!-- filter -->
                 <div class="row g-3">
                     <div class="col-md-4">
                         <input type="text" class="form-control shadow-sm" placeholder="Search Report..." aria-label="Search Report" aria-describedby="button-search" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
@@ -88,6 +96,8 @@
                         </button>
                     </div>
                 </div>
+
+                <!-- card -->
                 <div class="row g-3 mt-2">
                      <div class="col-lg-4 mb-4 col-md-6">
                          <div class="card">
@@ -198,6 +208,8 @@
                          </div>
                      </div>
                 </div>
+
+                <!-- pagination -->
                 <div class="d-flex justify-content-center">
                     <nav aria-label="Page navigation example">
                         <ul class="pagination justifify-content-center my-4">
@@ -212,6 +224,59 @@
             </div>
 
         </section>
+
+        <!-- Tambah Report Modal -->
+            <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+
+                        <!-- modal header -->
+                        <div class="modal-header bg-primary text-white">
+                            <h1 class="modal-title fs-5 fw-semibold" id="exampleModalLabel">
+                                <i class="fa-solid fa-pen-to-square"></i>Tambah Laporan Baru
+                            </h1>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <!-- modal body -->
+                        <form action="">
+                            <div class="modal-body p-5">
+                                <div class="mb-3">
+                                    <label for="title" class="form-label fw-semibold">Judul Laporan: </label>
+                                    <input type="text" class="form-control shadow-sm" id="title" placeholder="Masukkan judul laporan...">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="title" class="form-label fw-semibold">Pilih Kategori: </label>
+                                    <select class="form-control shadow-sm" id="" name="">
+                                        <option value="">Pilih Kategori</option>
+                                        <option value="">Akademik</option>
+                                        <option value="">Edukasi</option>
+                                        <option value="">Bimbingan</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="title" class="form-label fw-semibold">Isi laporan: </label>
+                                    <textarea class="form-control shadow-sm" rows="6" placeholder="Masukkan isi laporan..." name="" id=""></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="title" class="form-label fw-semibold">Upload Foto: </label>
+                                    <input type="file" class="form-control shadow-sm" accept="image/*">
+                                </div>
+                               
+                            </div>
+
+                            <!-- modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa-solid fa-paper-plane"></i> Kirim Laporan
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
     <!-- all report end -->
 
      <!-- footer -->
